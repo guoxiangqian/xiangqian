@@ -2,6 +2,7 @@
 $secret    = "aiden";//github的webhook 设置的密匙
 $path      = "/home/aiden/www/xiangqian";//项目所在路径
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
+echo 111;
 if ($signature) {
     $rawPost=file_get_contents("php://input");
     $hash = "sha1=".hash_hmac('sha1', $rawPost, $secret);
